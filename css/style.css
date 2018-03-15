@@ -1,0 +1,238 @@
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-wrapper {
+   width: 450px;
+   margin: 0 auto;
+}
+/* РАБОТА С ФОРМОЙ */
+
+.contacts-form {
+  text-align: center;
+  width: 100%;
+  margin: 100px auto 50px;
+  padding: 35px 20px 20px;
+  box-sizing: border-box;
+  border: 5px solid #8984cf;
+  box-shadow: 0 3px 20px 0;
+}
+.contacts-form__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts-form__list-item {
+  width: 70%;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.contacts-form__field {
+  position: relative;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px 5px;
+  border: 0;
+  border-bottom: 2px solid grey;
+  outline-color: #574fc9;
+  box-sizing: border-box;
+}
+
+.contacts-form label {
+  position: absolute;
+  content: '';
+  font-size: 18px;
+  display: block;
+  top: 15px;
+  left: 10px;
+  z-index: 1;
+  color: grey;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.contacts-form__field:focus ~ label,
+.contacts-form__field:valid ~ label{
+  top: -20px;
+  font-size: 16px;
+}
+
+.contacts-form__button {
+  position: relative;
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 50%;
+  outline-color: #574fc9;
+  margin: 0 auto;
+}
+
+.contacts-form__submit {
+  margin-right: 25px;
+}
+
+.contacts-form__button::before,
+.contacts-form__button::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background-color: rgba(120, 115, 187, 1.0);
+  transition: 0.2s ease-in all;
+}
+
+.contacts-form__submit::before {
+  top: 30px;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+.contacts-form__submit::after {
+  top: 30px;
+  left: 15px;
+}
+
+.contacts-form__reset::before,
+.contacts-form__reset::after{
+  left: 15px;
+}
+
+.contacts-form__submit:hover::before {
+  width: 15px;
+  top: 35px;
+  left: 13px;
+  transform: rotate(45deg);
+  background-color: #11de6d;
+}
+
+.contacts-form__submit:hover::after {
+  left: 20px;
+  transform: rotate(130deg);
+  background-color: #11de6d;
+}
+
+.contacts-form__reset:hover:before {
+  transform: rotate(45deg);
+  background-color: #e02056;
+}
+
+.contacts-form__reset:hover:after {
+  transform: rotate(-45deg);
+  background-color: #e02056;
+}
+
+/* СЕКЦИЯ СПИСКА КОНТАКТОВ */
+.contacts {
+  margin-bottom: 100px;
+}
+.contacts-list {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 5px solid #8984cf;
+  box-shadow: 0 3px 20px 0;
+  word-wrap: break-word;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__title {
+  color: #26243a;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contacts-item {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-left: 65px;
+  padding-right: 65px;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  align-items: center;
+  transition: 0.2s ease-in all;
+}
+
+.contacts-item__initials {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  font-size: 21px;
+  color: #7873bb;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-item__name-info {
+  
+}
+
+.contacts-item__firstname,
+.contacts-item__lastname {
+  max-width: 100%;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.contacts-item__tel {
+  max-width: 100%;
+  color: #211e43;
+  font-size: 16px;
+}
+
+.contacts-item__delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #e0e0e0;
+  border: 0;
+  border-radius: 50px;
+}
+
+.contacts-item__delete::before,
+.contacts-item__delete::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 2px;
+  left: 15px;
+  background-color: #7873bb;
+  transition: 0.2s ease-in all;
+}
+
+.contacts-item__delete:hover::before {
+  transform: rotate(45deg);
+  background-color: #e02056;
+}
+
+.contacts-item__delete:hover::after {
+  transform: rotate(-45deg);
+  background-color: #e02056;
+}

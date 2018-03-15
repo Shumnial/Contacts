@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Список контактов</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrapper">
+    <form class="contacts-form" method="post" action="#">
+      <ul class="contacts-form__list">
+        <li class="contacts-form__list-item">
+          <input type="text" class="contacts-form__lastname contacts-form__field" name="lastname" id="lastname" required maxlength="15">
+          <label for="lastname">Фамилия</label>
+        </li>
+        <li class="contacts-form__list-item">
+          <input type="text" class="contacts-form__firstname contacts-form__field" name="firstname" id="firstname" required maxlength="17">
+          <label for="firstname">Имя</label>
+        </li>
+        <li class="contacts-form__list-item">
+          <input type="tel" class="contacts-form__tel contacts-form__field" name="telephone" id="telephone" title="Заполните это поле, если хотите получать спам" required maxlength="15">
+          <label for="telephone">Телефон</label>
+        </li>
+      </ul>
+      <button type="submit" class="contacts-form__submit contacts-form__button" title="Сохранить контакт"></button>
+      <button type="reset" class="contacts-form__reset contacts-form__button" title="Сбросить форму"></button>
+    </form>
+    <section class="contacts">
+      <h2 class="contacts__title">Список контактов</h2>
+      <ul class="contacts-list">
+        <li class="contacts-item">
+          <span class="contacts-item__initials">ИИ</span>
+          <span class="contacts-item__firstname">Иван</span>
+          <span class="contacts-item__lastname">Иванов</span>
+          <a href="tel:+79630380364" class="contacts-item__tel">+79630380364</a>
+          <button class="contacts-item__delete"></button>
+        </li>
+        <li class="contacts-item">
+          <span class="contacts-item__initials">ПП</span>
+          <span class="contacts-item__firstname">Петр</span>
+          <span class="contacts-item__lastname">Петров</span>
+          <a href="tel:+79630380364" class="contacts-item__tel">+79630380364</a>
+          <button class="contacts-item__delete"></button>
+        </li>
+        <li class="contacts-item">
+          <span class="contacts-item__initials">НШ</span>
+          <span class="contacts-item__firstname">Никита</span>
+          <span class="contacts-item__lastname">Шумаков</span>
+          <a href="tel:+79630380364" class="contacts-item__tel">+79630380364</a>
+          <button class="contacts-item__delete"></button>
+        </li>
+      </ul>
+    </section>
+    </div>
+    <template id="contacts-template">
+      <li class="contacts-item">
+        <span class="contacts-item__initials"></span>
+        <span class="contacts-item__firstname"></span>
+        <span class="contacts-item__lastname"></span>
+        <a href="" class="contacts-item__tel"></a>
+        <button class="contacts-item__delete"></button>
+      </li>
+    </template>
+    <script src="js/script.js"></script>
+  </body>
+</html>
